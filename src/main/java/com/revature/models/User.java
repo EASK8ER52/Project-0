@@ -9,7 +9,8 @@ import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
-public class User {
+public class User
+{
 
 	private int id;
 	private String username;

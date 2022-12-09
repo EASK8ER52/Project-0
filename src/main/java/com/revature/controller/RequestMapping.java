@@ -4,13 +4,15 @@ import com.revature.exceptions.NotLoggedInException;
 
 import io.javalin.Javalin;
 
-public class RequestMapping {
+public class RequestMapping
+{
 	
 	private static AuthenticateController authController = new AuthenticateController();
 	private static PlanetController planetController = new PlanetController();
 	private static MoonController moonController = new MoonController();
 	
-	public static void setupEndpoints(Javalin app) {
+	public static void setupEndpoints(Javalin app)
+	{
 		
 		// Authenticate user and create a session for the user, sending username/password in the body as JSON
 		app.post("/login", ctx -> authController.authenticate(ctx));
@@ -24,14 +26,17 @@ public class RequestMapping {
 		// Check for valid sessions
 		// Throw a custom exception if a session is not valid
 		// This exception will be handled separately
-		app.before("/api/*", ctx -> {	
-			if(!authController.verifySession(ctx)) {
+		app.before("/api/*", ctx ->
+		{	
+			if(!authController.verifySession(ctx))
+			{
 				throw new NotLoggedInException();
 			}
 		});
 		
 		// Handling the exception when a session doesn't exist
-		app.exception(NotLoggedInException.class, (e,ctx) -> {
+		app.exception(NotLoggedInException.class, (e,ctx) ->
+		{
 			ctx.json(e.getMessage()).status(401);
 		});
 		

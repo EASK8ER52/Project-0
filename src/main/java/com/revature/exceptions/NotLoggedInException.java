@@ -1,25 +1,31 @@
 package com.revature.exceptions;
 
-public class NotLoggedInException extends RuntimeException{
+public class NotLoggedInException extends RuntimeException
+{
 
-	public NotLoggedInException() {
+	public NotLoggedInException()
+	{
 		super("You must be logged in to complete this operation");
 	}
 
 	public NotLoggedInException(String message, Throwable cause, boolean enableSuppression,
-			boolean writableStackTrace) {
+			boolean writableStackTrace)
+	{
 		super(message, cause, enableSuppression, writableStackTrace);
 	}
 
-	public NotLoggedInException(String message, Throwable cause) {
+	public NotLoggedInException(String message, Throwable cause)
+	{
 		super(message, cause);
 	}
 
-	public NotLoggedInException(String message) {
+	public NotLoggedInException(String message)
+	{
 		super(message);
 	}
 
-	public NotLoggedInException(Throwable cause) {
+	public NotLoggedInException(Throwable cause)
+	{
 		super(cause);
 	}
 }

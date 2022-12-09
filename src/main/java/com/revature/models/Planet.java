@@ -8,7 +8,8 @@ import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
-public class Planet {
+public class Planet
+{
 	
 	private int id;
 	private String name;

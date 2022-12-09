@@ -5,7 +5,8 @@ import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
-public class Moon {
+public class Moon
+{
 	
 	private int id;
 	private String name; 

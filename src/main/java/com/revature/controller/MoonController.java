@@ -9,16 +9,19 @@ import com.revature.service.MoonService;
 
 import io.javalin.http.Context;
 
-public class MoonController {
+public class MoonController
+{
 	
 	private MoonService mService = new MoonService();
 
-	public void getAllMoons(Context ctx) {
+	public void getAllMoons(Context ctx)
+	{
 		
 		ctx.json(mService.getAllMoons()).status(200);
 	}
 
-	public void getMoonByName(Context ctx) {
+	public void getMoonByName(Context ctx)
+	{
 		
 		User u = ctx.sessionAttribute("user");
 		String moonName = ctx.pathParam("name");
@@ -28,7 +31,8 @@ public class MoonController {
 		ctx.json(m).status(200);
 	}
 
-	public void getMoonById(Context ctx) {
+	public void getMoonById(Context ctx)
+	{
 		
 		User u = ctx.sessionAttribute("user");
 		int moonId = ctx.pathParamAsClass("id", Integer.class).get();
@@ -38,7 +42,8 @@ public class MoonController {
 		ctx.json(m).status(200);
 	}
 
-	public void createMoon(Context ctx) {
+	public void createMoon(Context ctx)
+	{
 		
 		Moon m = ctx.bodyAsClass(Moon.class);
 		User u = ctx.sessionAttribute("user");
@@ -48,7 +53,8 @@ public class MoonController {
 		ctx.json(outGoingMoon).status(201);
 	}
 
-	public void deleteMoon(Context ctx) {
+	public void deleteMoon(Context ctx)
+	{
 		
 		int moonId = ctx.pathParamAsClass("id", Integer.class).get();
 		
@@ -57,7 +63,8 @@ public class MoonController {
 		ctx.json("Moon successfully deleted").status(202);
 	}
 	
-	public void getPlanetMoons(Context ctx) {
+	public void getPlanetMoons(Context ctx)
+	{
 		
 		int planetId = ctx.pathParamAsClass("id", Integer.class).get();
 		
