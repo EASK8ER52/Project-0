@@ -13,13 +13,13 @@ public class MainDriver
 
 	public static void main(String[] args)
 	{
-		/*Javalin app = Javalin.create(confg ->
+		Javalin app = Javalin.create(confg ->
 		{
 			confg.plugins.enableDevLogging();
 		});
 		RequestMapping.setupEndpoints(app);
-		app.start(7000);*/
-		names.add("Clark");
+		app.start(7000);
+		/*names.add("Clark");
 		names.add("Bruce");
 		names.add("Oliver");
 		Javalin app = Javalin.create();
@@ -34,6 +34,6 @@ public class MainDriver
 			ctx.status(201);
 		});
 
-		app.start();
+		app.start();*/
 	}
 }
