@@ -61,14 +61,14 @@ public class UserDao
         }
     }
 
-    public static void main(String[] args)
-    {
-        UserDao dao = new UserDao();
-        UsernamePasswordAuthentication newUser = new UsernamePasswordAuthentication();
-        newUser.setUsername("Java");
-        newUser.setPassword("I want Spring");
-        //System.out.println(dao.createUser(newUser).getId());
-        System.out.println(dao.getUserByUsername("Java"));
-    }
+    // public static void main(String[] args)
+    // {
+    //     UserDao dao = new UserDao();
+    //     UsernamePasswordAuthentication newUser = new UsernamePasswordAuthentication();
+    //     newUser.setUsername("Java");
+    //     newUser.setPassword("I want Spring");
+    //     //System.out.println(dao.createUser(newUser).getId());
+    //     System.out.println(dao.getUserByUsername("Java"));
+    // }
 
 }
