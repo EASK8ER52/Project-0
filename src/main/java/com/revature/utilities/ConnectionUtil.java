@@ -31,10 +31,10 @@ public class ConnectionUtil
         }
     }
 
-    public static void main(String[] args)
-    {
-        // use this to confirm you set up your environment variables correctly
-        System.out.println(createConnection());
-    }
+    // public static void main(String[] args)
+    // {
+    //     // use this to confirm you set up your environment variables correctly
+    //     System.out.println(createConnection());
+    // }
 
 }
